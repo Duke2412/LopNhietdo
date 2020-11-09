@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    let Temperature=function (celcius) {
+    this.celcius=celcius;
+    this.getC=function () {
+        return celcius;
+    }
+    this.getF=function () {
+        return ((celcius*1.8)+32 );
+    }
+    this.getK=function () {
+        return (celcius+273.15)
+    }
+    }
+    let x=+prompt('Nhập độ C: ');
+    let temperature= new Temperature(x);
+    let c=temperature.getC();
+    let f=temperature.getF();
+    let k=temperature.getK();
+    alert("Nhiệt độ ở độ C là:"+c);
+    alert("Nhiệt độ ở độ F là:"+f);
+    alert("Nhiệt độ ở độ K là:"+k);
+</script>
+</body>
+</html>
